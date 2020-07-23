@@ -164,7 +164,7 @@ print(ListA.index('3'))
 ## What is a __Dictionary__??
 ### [Dictionaries](https://www.learnpython.org/en/Dictionaries) are data structures used to map arbitrary keys to values
 ### Similar to Lists, Dictionaries can consist of a multitude of object types (`str()`, `int()`, `list()`, `dict()`, etc...)
-### Define by enclosing keys values separated by colon, within curly braces `{ }`
+### Define by enclosing keys & values separated by colon, within curly braces `{ }`
 ### To access the Dictionary values, call using the key as the index (similar to accessing list values)
 ```python
 # Dict
