@@ -41,7 +41,7 @@ bool() == True
 
 str() == 'text'
 ```
-## __Data structures__
+### __Data structures__
 ```python
 list() == [1,2,3,4]
 
@@ -50,11 +50,11 @@ tuple() == (1,2,3,4)
 dict() == {'key1': 'value1', 'key2': 2}
 ```
 
-## __Variables__
-### Variables are simply named objects, assigned by using `=`
-### Unlike most other programming languages, you do not need to declare a variable before using it.
-### A variable can also be reassigned to a different object at any point, so variable naming is very important for tracking in your code
-### Variable names cannot start with a number and can only include letters, numbers, or underscore `[a-z,0-9,_]`
+### __Variables__
+#### Variables are simply named objects, assigned by using `=`
+#### Unlike most other programming languages, you do not need to declare a variable before using it.
+#### A variable can also be reassigned to a different object at any point, so variable naming is very important for tracking in your code
+#### Variable names cannot start with a number and can only include letters, numbers, or underscore `[a-z,0-9,_]`
 ```python
 Var_1 = 'This is a str() Variable'
 ```
