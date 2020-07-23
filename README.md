@@ -548,6 +548,8 @@ b.var = 'something'
 print(b.var) # something
 b.method(3, 4)
 b.P(f'VAR: {b.var},\nBAR: {b.bar}')
+isinstance(b,Foo) # True, b is an instance of Bar, which is an instance of Foo
+isinstance(b,str) # False, b is not an instance of str()
 
 ```
 
