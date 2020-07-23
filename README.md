@@ -3,16 +3,17 @@
 ## __Python 101__ - _Basics_
 #### Testing with Python basics
 #### Using Functions and Modules
-## __Python 201__ - _Advanced API and Data Manipulation_
-##### Connecting to network devices
-##### Interacting with APIs
-##### Data structure manipulation
+## __Python 201__ - _Network Devices, API Calls and Data Manipulation_
+#### Connecting to network devices
+#### Interacting with APIs
+#### Data structure manipulation
 ## Notes
 ### Developed for Python 3.6+
 ### Some tasks build onto the next, so wait to exit python shell until finished
 ### It is recommended to manually type(not just copy/paste) as much code as you are comfortable with, to gain a greater familiarity with the syntax
 ### Some modules may be required to be installed manually (netmiko)
-
+## __Python 301__ - _Working with Class Objects_
+#### Building and using Classes
 
 # Python 101
 ## What is Python??
@@ -487,6 +488,58 @@ print(r.text)
 
 ```
 
+# Python 301
+## Working with Class objects
+
+```python
+class  Foo          (object):
+    """^class name   ^ inherits from the default Python object class"""
+    bar = 'bar'
+    """ Improper use of Class attribute,
+    #   as this attributed would be shared among all instances of Foo.
+    # Should be an Instance attribute as shown below"""
+    def __init__(self, argA='Foo'):
+        """      #^ The first argument in the class instance and methods should be 'self'
+        #^ double underscore (dunder) methods are usually special.  This one
+        #  gets called immediately after a new instance is created."""
+        self.var = argA # instance attribute.
+        print(self.var, self.bar)  #<---self.bar references class attribute
+        self.bar = 'Bar'   #<---self.bar is now an instance attribute
+        print(self.var, self.bar)
+    def method(self, arg1, arg2):
+        """This method has arguments.  You would call it like this:  instance.method(1, 2)"""
+        print(f'in method (args): {arg1}, {arg2}')
+        print(f'in method (attributes): {self.var}, {self.bar}')
+
+
+a = Foo('FOO') # This calls __init__ (indirectly)
+
+print(a.var) # FOO
+a.var = 'foo'
+a.method(1, 2)
+
+Foo.method(a, 1, 2) #<--- Same as a.method(1, 2).
+                    # This makes it a little more explicit what the argument 'self' actually is.
+
+class  Bar          (Foo):
+    """^class name   ^ inherits from the object Foo we created"""
+    def __init__(self, argA='FooBar', argB='BarFoo'):
+        Foo.__init__(self,argA)
+        """Instantiate inherited object"""
+        self.bar = argB # Assigning Bar argB to inherited Foo() attribute 'bar'
+        self.P = print
+        """Assigning built-in print() function to attribute 'P',
+           which means it is now a callable method of Bar()"""
+
+
+b = Bar() # This calls Bar.__init(), which in-turn calls Foo.__init__()
+print(b.bar) # BarFoo
+b.var = 'something'
+print(b.var) # something
+b.method(3, 4)
+b.P(f'VAR: {b.var},\nBAR: {b.bar}')
+
+```
 
 
 
