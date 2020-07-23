@@ -493,7 +493,13 @@ print(r.text)
 ```
 
 # Python 301
-## Working with Class objects
+## What is a Class??
+### a [Class](https://realpython.com/python3-object-oriented-programming/) is used to create user-defined data structures.
+### Classes define functions called _methods_, which identify the behaviors and actions that an object created from the class can perform with its data.
+### A class is a blueprint for how something should be defined, and usually doesn’t contain any actual data.
+### While the class is the blueprint, an _instance_ is an object that is built from a class and contains real data.
+### Put another way, a class is like a form or questionnaire. An instance is like a form that has been filled out with information. Just like many people can fill out the same form with their own unique information, many instances can be created from a single class.
+### Copy and Paste the below examples into the Python interpreter and see how it functions
 
 ```python
 class  Foo          (object):
