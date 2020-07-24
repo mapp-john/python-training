@@ -247,7 +247,7 @@ for i in ListA:
 
 ## What is a __Function__??
 ### A [Function](https://www.learnpython.org/en/Functions) is a way to group code into reusable blocks
-### By using Functions you can keep your code DRY, Don't Repeat Yourself, which is a coding style to reduce repetitive information
+### By using Functions you can keep your code DRY (Don't Repeat Yourself), which is a coding style to reduce repetitive information
 ```python
 # Creating Function
 def PrintList(LIST):
@@ -509,7 +509,7 @@ class  Foo          (object):
     #   as this attributed would be shared among all instances of Foo.
     # Should be an Instance attribute as shown below"""
     def __init__(self, argA='Foo'):
-        """      #^ The first argument in the class instance and methods should be 'self'
+        """     #^ The first argument in the class instance and methods should be 'self'
         #^ double underscore (dunder) methods are usually special.  This one
         #  gets called immediately after a new instance is created."""
         self.var = argA # instance attribute.
