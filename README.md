@@ -11,7 +11,7 @@
 #### Building and using Classes
 
 
-### ___Notes___
+# ___Notes___
 ##### Developed for Python 3.6+
 ##### Some tasks build onto the next, so wait to exit python shell until finished
 ##### It is recommended to manually type(not just copy/paste) as much code as you are comfortable with, to gain a greater familiarity with the syntax
